@@ -1,0 +1,19 @@
+{
+  "name": "groupomania",
+  "version": "1.0.0",
+  "description": "backen groupomania",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/eliefirst/LaurentDouieb_7_19102021.git"
+  },
+  "author": "Laurent Douieb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eliefirst/LaurentDouieb_7_19102021/issues"
+  },
+  "homepage": "https://github.com/eliefirst/LaurentDouieb_7_19102021#readme"
+}
