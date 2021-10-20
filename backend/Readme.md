@@ -25,7 +25,8 @@ npm install --save cors;
 npm install --save helmet;
 npm install --save mysql;
 npm install --save ratelimit;
-npm install --save toobusy
+npm install --save toobusy;
+npm install fs-extra
     
 
 touch server.js;
