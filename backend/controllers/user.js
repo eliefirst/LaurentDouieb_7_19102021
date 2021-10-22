@@ -13,9 +13,9 @@ const passValid = require("secure-password-validator");
 
 ///////////////////////////////////////
 // Error Class
-const HttpError = require("./models/http-error");
+const HttpError = require("../models/http-error");
 // Database Route
-const db = require("./config/db")
+const db = require("../config/db")
 
 // Password Validator Options
 const options = {
@@ -55,7 +55,7 @@ exports.getUserProfile = (req, res, next) => {
     const { id } = req.params;
 
     const string =
-        "SELECT firstName, lastName, email, photo_url, department, role, linkedin_url FROM users WHERE id = ?";
+        "SELECT firstName, lastName, email, pictureurl, department, role, linkedin_url FROM users WHERE id = ?";
     const inserts = [id];
     const sql = mysql.format(string, inserts);
 
@@ -108,7 +108,7 @@ exports.updateUserProfile = (req, res, next) => {
 
     if (isFirstName && isLastName && isEmail && isDepartment && isRole && isLinkedinUrl) {
         const string =
-            "UPDATE users SET firstName = ?, lastName = ?, email = ?, photo_url = ?,  department = ?, role = ?, linkedin_url = ? WHERE id = ?";
+            "UPDATE users SET firstName = ?, lastName = ?, email = ?, pictureurl = ?,  department = ?, role = ?, linkedin_url = ? WHERE id = ?";
         const inserts = [firstName, lastName, email, imageUrl, department, role, linkedin_url, user.id];
         const sql = mysql.format(string, inserts);
 
