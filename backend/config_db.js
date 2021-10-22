@@ -21,14 +21,14 @@ const schema = `CREATE DATABASE ${process.env.SQL_DB}`;
 
 const userTable =
     "CREATE TABLE `users` (`id` int NOT NULL AUTO_INCREMENT, `account` varchar(45) COLLATE utf8_bin NOT NULL DEFAULT 'user', `user_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `firstName` varchar(45) COLLATE utf8_bin NOT NULL, `lastName` varchar(45) COLLATE utf8_bin NOT NULL, `email` varchar(100) COLLATE utf8_bin NOT NULL, `password` varchar(60) COLLATE utf8_bin NOT NULL, `pictureurl` varchar(255) COLLATE utf8_bin DEFAULT NULL, `department` varchar(65) COLLATE utf8_bin DEFAULT NULL, `role` varchar(65) COLLATE utf8_bin DEFAULT NULL, `linkedin_url` varchar(255) COLLATE utf8_bin DEFAULT NULL, PRIMARY KEY (`id`), UNIQUE KEY `email_UNIQUE` (`email`)) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;";
-     
+
 // categories table
 
 const categoriesTable =
     "CREATE TABLE `categories` (`id` int NOT NULL AUTO_INCREMENT, `category` varchar(255) COLLATE utf8_bin NOT NULL, PRIMARY KEY (`id`), UNIQUE KEY `name_UNIQUE` (`category`)) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;";
 
 const InsertCategories =
-    "INSERT INTO `categories` (`category`) VALUES ('Animaux'),('Comic'),('Drôle'),('Gaming'),('Meme'),('Random');";
+    "INSERT INTO `categories` (`category`) VALUES ('Passions'),('Sciences'),('Best Of Groupomania'),('Rencontre');";
 
 // posts table
 
